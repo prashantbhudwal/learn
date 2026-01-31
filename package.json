@@ -21,6 +21,7 @@
     "testingpkg": "bun run --filter @learn/testing",
     "unix": "bun run --filter @learn/unix",
     "http": "bun run --filter @learn/http",
-    "http:start": "bun run --filter @learn/http start"
+    "http:start": "bun run --filter @learn/http start",
+    "quiz": "bun run --filter @learn/openquiz start"
   }
 }
