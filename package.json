@@ -3,23 +3,24 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "workspaces": [
+    "apps/*/*",
+    "notebooks/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "start:server": "bun run http/server.js"
-  },
-  "devDependencies": {
-    "@vitest/ui": "^4.0.17",
-    "happy-dom": "^20.1.0",
-    "typescript": "~5.9.3",
-    "vite": "^7.2.4",
-    "vitest": "^4.0.16"
-  },
-  "dependencies": {
-    "@clack/prompts": "^1.0.0",
-    "ai": "^6.0.62"
+    "dev": "bun run --filter @learn/web-vite dev",
+    "build": "bun run --filter @learn/web-vite build",
+    "preview": "bun run --filter @learn/web-vite preview",
+    "test": "bun run --filter @learn/testing test",
+    "test:ui": "bun run --filter @learn/testing test:ui",
+    "test:all": "bun run test",
+    "web:vite": "bun run --filter @learn/web-vite",
+    "algos": "bun run --filter @learn/algos",
+    "nodepkg": "bun run --filter @learn/node",
+    "testingpkg": "bun run --filter @learn/testing",
+    "unix": "bun run --filter @learn/unix",
+    "http": "bun run --filter @learn/http",
+    "http:start": "bun run --filter @learn/http start"
   }
 }

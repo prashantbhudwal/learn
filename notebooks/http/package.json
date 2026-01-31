@@ -1,0 +1,10 @@
+{
+  "name": "@learn/http",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "bun run server.js",
+    "dev": "bun run --watch server.js"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@learn/testing",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "vitest": "^4.0.16",
+    "@vitest/ui": "^4.0.17",
+    "happy-dom": "^20.1.0"
+  }
+}

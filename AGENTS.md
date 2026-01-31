@@ -5,23 +5,23 @@ This document contains instructions for AI agents (like Cursor, Copilot, etc.) w
 ## 1. Environment & Commands
 
 ### Package Manager
-- This project appears to use `pnpm` (based on `pnpm-lock.yaml`).
-- If `pnpm` is not available, fall back to `npm`.
+- This project uses `bun` (based on `bun.lockb`).
+- If `bun` is not available, please install it or discuss with the user.
 
 ### Commands
-- **Install Dependencies:** `pnpm install`
-- **Development Server:** `pnpm run dev` (Runs Vite)
-- **Build:** `pnpm run build` (Runs `tsc` and `vite build`)
-- **Preview Build:** `pnpm run preview`
-- **Test:** `pnpm test` (Runs Vitest)
+- **Install Dependencies:** `bun install`
+- **Development Server:** `bun run dev` (Runs Vite)
+- **Build:** `bun run build` (Runs `tsc` and `vite build`)
+- **Preview Build:** `bun run preview`
+- **Test:** `bun run test` (Runs Vitest)
 
 ### Running Specific Tests
 To run a specific test file or test case:
-- **Run a single file:** `npx vitest run path/to/test.ts`
-- **Run with filter:** `npx vitest run -t "test name pattern"`
+- **Run a single file:** `bun run test path/to/test.ts`
+- **Run with filter:** `bun run test -t "test name pattern"`
 
 ### Linting & Type Checking
-- **Type Check:** `npx tsc --noEmit`
+- **Type Check:** `bun x tsc --noEmit`
 - Note: The `build` script includes a `tsc` check. Always verify type safety before committing.
 
 ## 2. Code Style & Conventions
@@ -43,7 +43,7 @@ To run a specific test file or test case:
 
 ### Naming Conventions
 - **Variables & Functions:** camelCase (e.g., `setupCounter`, `element`).
-- **Files:** kebab-case (e.g., `intro.test.ts`, `pnpm-lock.yaml`) or camelCase depending on existing patterns (currently mixed, prefer existing consistency).
+- **Files:** kebab-case (e.g., `intro.test.ts`, `bun.lockb`) or camelCase depending on existing patterns (currently mixed, prefer existing consistency).
 - **Classes/Components:** PascalCase.
 
 ### Error Handling
@@ -89,5 +89,5 @@ To run a specific test file or test case:
 ## 6. General Behavior
 
 - **Safety:** Do not delete files or directories unless explicitly instructed.
-- **Verification:** After making changes, run the relevant tests (`pnpm test`) and type check (`npx tsc --noEmit`) to ensure no regressions.
+- **Verification:** After making changes, run the relevant tests (`bun run test`) and type check (`bun x tsc --noEmit`) to ensure no regressions.
 - **Conventions:** Follow the existing patterns in the codebase. If existing code uses a specific style (even if different from above), prioritize consistency with the immediate context.
