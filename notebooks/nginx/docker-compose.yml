@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./cache:/var/cache/nginx
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4G
+
+  backend:
+    image: oven/bun:latest
+    volumes:
+      - ./backend.ts:/app/backend.ts:ro
+    working_dir: /app
+    command: bun run backend.ts
+    expose:
+      - "3001"
