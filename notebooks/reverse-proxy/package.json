@@ -1,0 +1,14 @@
+{
+  "name": "@learn/reverse-proxy",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/proxy.ts",
+    "dev": "bun run --watch src/proxy.ts",
+    "backend": "bun run src/backend.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.8"
+  }
+}
