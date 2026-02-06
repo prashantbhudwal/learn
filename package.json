@@ -22,6 +22,10 @@
     "unix": "bun run --filter @learn/unix",
     "http": "bun run --filter @learn/http",
     "http:start": "bun run --filter @learn/http start",
+    "proxy": "bun run --filter @learn/reverse-proxy",
     "quiz": "bun run --filter @learn/openquiz start"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.8"
   }
 }
