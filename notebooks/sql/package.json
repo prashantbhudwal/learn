@@ -1,0 +1,24 @@
+{
+  "name": "@learn/sql",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "sql": "bun run src/index.ts",
+    "drizzle": "bun run src/drizzle-runner.ts --",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.8",
+    "better-sqlite3": "^12.6.2",
+    "drizzle-kit": "^0.31.9",
+    "typescript": "~5.9.3"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.1"
+  }
+}
