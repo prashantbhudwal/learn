@@ -1,9 +1,9 @@
-import { intro, outro, select, isCancel } from '@clack/prompts';
-import color from 'picocolors';
+import { intro, outro, select, isCancel } from '@clack/prompts'
+import color from 'picocolors'
 
 async function main() {
-  console.clear();
-  intro(color.bgCyan(color.black(' OpenQuiz ')));
+  console.clear()
+  intro(color.bgCyan(color.black(' OpenQuiz ')))
 
   while (true) {
     const action = await select({
@@ -13,20 +13,20 @@ async function main() {
         { value: 'create', label: 'Create Quiz' },
         { value: 'exit', label: 'Exit' },
       ],
-    });
+    })
 
     if (isCancel(action) || action === 'exit') {
-      break;
+      break
     }
 
     if (action === 'start') {
-      console.log(color.green('Starting quiz... (placeholder)'));
+      console.log(color.green('Starting quiz... (placeholder)'))
     } else if (action === 'create') {
-      console.log(color.blue('Creating quiz... (placeholder)'));
+      console.log(color.blue('Creating quiz... (placeholder)'))
     }
   }
 
-  outro('Thanks for playing!');
+  outro('Thanks for playing!')
 }
 
-main().catch(console.error);
+main().catch(console.error)
