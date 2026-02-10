@@ -26,6 +26,8 @@ learn/
 - Learning or practicing a concept? → `notebooks/`
 - Creating shared code for multiple apps? → `packages/`
 
+**See Also:** [LEARNING.md](./LEARNING.md) - Comprehensive guide on monorepo patterns, creating learning modules, and teaching best practices.
+
 ## 2. Environment & Commands
 
 ### Package Manager
